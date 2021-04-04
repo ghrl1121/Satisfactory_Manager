@@ -39,6 +39,18 @@ namespace Satisfactory_map
         private void button1_Click(object sender, EventArgs e)
         {
 
+            MessageBox.Show("잠깐!! 실행시 설치 파일 선택 하세요!");
+            
+            OpenFileDialog A = new OpenFileDialog();
+            DialogResult d = A.ShowDialog();
+            if (d == DialogResult.OK)
+            {
+                string fileName = A.FileName;
+                string fileFullName = A.FileName;
+                string filePath = fileFullName.Replace(fileName, "");
+                Process.Start(fileName,filePath);
+            }
+
         }
 
         private void button4_Click(object sender, EventArgs e)
