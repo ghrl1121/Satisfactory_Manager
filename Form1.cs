@@ -39,9 +39,6 @@ namespace Satisfactory_map
         private void button1_Click(object sender, EventArgs e)
         {
 
-            //스팀은 steam://rungameid/526870 으로 실행 함
-            //에픽 게임즈는 ... 피드팩이 필요
-
             Form3 p = new Form3();
             p.ShowDialog();
 
