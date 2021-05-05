@@ -38,21 +38,12 @@ namespace Satisfactory_map
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //바로가기는 인식 안됨
+
             //스팀은 steam://rungameid/526870 으로 실행 함
             //에픽 게임즈는 ... 피드팩이 필요
-            MessageBox.Show("잠깐!! 실행시 설치 파일 선택 하세요!");
-            MessageBox.Show("바로가기는 인식이 안됩니다. 수정 하겠습니다. \n 아직까지는 스팀 유저라 스팀만 알고 있습니다. \n 에픽 게임즈는 알려 주시면 감사합니다.");
-            
-            OpenFileDialog A = new OpenFileDialog();
-            DialogResult d = A.ShowDialog();
-            if (d == DialogResult.OK)
-            {
-                string fileName = A.FileName;
-                string fileFullName = A.FileName;
-                string filePath = fileFullName.Replace(fileName, "");
-                Process.Start(fileName,filePath);
-            }
+
+            Form3 p = new Form3();
+            p.ShowDialog();
 
         }
 
@@ -62,7 +53,7 @@ namespace Satisfactory_map
             Process b = new Process();
             b.StartInfo.FileName = "https://satisfactory-calculator.com/ko/interactive-map";
             b.Start();
-            b.WaitForExit(100);
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
