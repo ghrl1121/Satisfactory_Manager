@@ -21,6 +21,7 @@ namespace Satisfactory_map
         private void button1_Click(object sender, EventArgs e)
         {
             Process.Start("steam://rungameid/526870");
+            Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -41,6 +42,7 @@ namespace Satisfactory_map
                 string filePath = fileFullName.Replace(fileName, "");
                 Process.Start(fileName, filePath);
             }
+            Close();
         }
     }
 }

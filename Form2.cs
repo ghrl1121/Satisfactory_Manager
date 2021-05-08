@@ -20,26 +20,20 @@ namespace Satisfactory_map
 
         private void button1_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process a = new Process();
-            a.StartInfo.FileName = "https://drive.google.com/drive/my-drive";
-            a.Start();
-            a.WaitForExit(100);
+            Process.Start("https://drive.google.com/drive/my-drive");
+            Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Process b = new Process();
-            b.StartInfo.FileName = "https://mybox.naver.com/";
-            b.Start();
-            b.WaitForExit(100);
+            Process.Start("https://mybox.naver.com/");
+            Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Process c = new Process();
-            c.StartInfo.FileName = "https://www.dropbox.com/home";
-            c.Start();
-            c.WaitForExit(100);
+            Process.Start("https://www.dropbox.com/home");
+            Close();
         }
     }
 }

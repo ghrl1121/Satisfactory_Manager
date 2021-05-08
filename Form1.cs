@@ -47,9 +47,7 @@ namespace Satisfactory_map
         private void button4_Click(object sender, EventArgs e)
         {
             MessageBox.Show("맵 로딩 할때는 \"CLICK/DROP YOURSAVE GAME HERE\" 을 클릭 한후 로딩하세요");
-            Process b = new Process();
-            b.StartInfo.FileName = "https://satisfactory-calculator.com/ko/interactive-map";
-            b.Start();
+            Process.Start("https://satisfactory-calculator.com/ko/interactive-map");
             
         }
 
