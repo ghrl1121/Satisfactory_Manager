@@ -29,7 +29,6 @@ namespace Satisfactory_map
         {
             //에픽게임즈
             Process.Start("com.epicgames.launcher://apps/CrabTest?action=launch&silent=true");
-            Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
