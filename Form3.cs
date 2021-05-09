@@ -28,10 +28,7 @@ namespace Satisfactory_map
         private void button2_Click(object sender, EventArgs e)
         {
             //에픽게임즈
-            //모름 ... 도와주세요!
-            //일딴 밑에 에픽게임즈의 링크인데... 달라...!
-            //com.epicgames.launcher://apps/[...] <알게 된 이유는 다른게임때문에 알게 된 사연
-            MessageBox.Show("죄송합니다. \n스팀 유저라 피드팩이 필요 합니다.");
+            Process.Start("com.epicgames.launcher://apps/CrabTest?action=launch&silent=true");
         }
 
         private void button3_Click(object sender, EventArgs e)
