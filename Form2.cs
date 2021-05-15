@@ -16,28 +16,39 @@ namespace Satisfactory_map
         public Form2()
         {
             InitializeComponent();
+            OpenFileDialog A = new OpenFileDialog();
+            DialogResult d = A.ShowDialog();
+            if (d == DialogResult.OK)
+            {
+                string fileName = A.FileName;
+                string fileFullName = A.FileName;
+                string filePath = fileFullName.Replace(fileName , "");
+                label2.Text = fileName;
+
+            }
+            else
+            {
+                Close();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //구글
-            Process.Start("https://drive.google.com/drive/my-drive");
-            Close();
-            
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //네이버
-            Process.Start("https://mybox.naver.com/");
-            Close();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            //드롭박스
-            Process.Start("https://www.dropbox.com/home");
-            Close();
+            if (radioButton1.Checked == true)
+            {
+                //구글
+                Process.Start("https://drive.google.com/drive/my-drive");
+            }
+            else if (radioButton2.Checked == true)
+            {
+                //네이버
+                Process.Start("https://mybox.naver.com/");
+            }
+            else if (radioButton3.Checked == true)
+            {
+                //드롭박스
+                Process.Start("https://www.dropbox.com/home");
+            }
         }
     }
 //공부중

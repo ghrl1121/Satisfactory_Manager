@@ -58,7 +58,7 @@ namespace Satisfactory_map
         {
             //빽업...(공부 필요)
             Form2 m = new Form2();
-            m.ShowDialog();
+            m.Show();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
