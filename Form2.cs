@@ -23,13 +23,10 @@ namespace Satisfactory_map
                 string fileName = A.FileName;
                 string fileFullName = A.FileName;
                 string filePath = fileFullName.Replace(fileName , "");
-                label2.Text = fileName;
+                listBox1.Text = fileName;
 
             }
-            else
-            {
-                Close();
-            }
+          
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -37,7 +34,7 @@ namespace Satisfactory_map
             if (radioButton1.Checked == true)
             {
                 //구글
-                Process.Start("https://drive.google.com/drive/my-drive");
+                Process.Start("https://drive.google.com/");
             }
             else if (radioButton2.Checked == true)
             {
@@ -50,9 +47,25 @@ namespace Satisfactory_map
                 Process.Start("https://www.dropbox.com/home");
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog A = new OpenFileDialog();
+            DialogResult d = A.ShowDialog();
+            if (d == DialogResult.OK)
+            {
+                string fileName = A.FileName;
+                string fileFullName = A.FileName;
+                string filePath = fileFullName.Replace(fileName, "");
+                listBox1.Text = fileName;
+
+            }
+        }
     }
+
 //공부중
 //계획은 시간(분) 단위로 각 빽업을 해주는것을 원했지만...
 //역시 간딴한 C# 공부는 없다고 전했다...
 //빽업하기도....;;
 }
+
