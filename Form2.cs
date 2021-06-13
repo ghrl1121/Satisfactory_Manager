@@ -23,10 +23,13 @@ namespace Satisfactory_map
                 string fileName = A.FileName;
                 string fileFullName = A.FileName;
                 string filePath = fileFullName.Replace(fileName , "");
-                listBox1.Text = fileName;
+                textBox1.Text = fileName;
 
             }
-          
+          else
+            {
+                textBox1.Text = "파일을 선택하세요";
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -46,6 +49,10 @@ namespace Satisfactory_map
                 //드롭박스
                 Process.Start("https://www.dropbox.com/home");
             }
+            else
+            {
+                MessageBox.Show("선택하세요!");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -57,8 +64,24 @@ namespace Satisfactory_map
                 string fileName = A.FileName;
                 string fileFullName = A.FileName;
                 string filePath = fileFullName.Replace(fileName, "");
-                listBox1.Text = fileName;
+                textBox1.Text = fileName;
 
+            }
+            else
+            {
+                textBox1.Text = "파일을 선택하세요";
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                timer1.Start();
+                //for(int i ; i < 100 ;i++)
+                //{
+                //    textBox2.Text += 
+                //}
             }
         }
     }
