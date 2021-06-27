@@ -1,4 +1,6 @@
 ﻿
+using System.Windows.Forms;
+
 namespace Satisfactory_map
 {
     partial class Form2
@@ -42,6 +44,7 @@ namespace Satisfactory_map
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,7 +103,7 @@ namespace Satisfactory_map
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(11, 145);
+            this.button1.Location = new System.Drawing.Point(11, 147);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 3;
@@ -128,10 +131,11 @@ namespace Satisfactory_map
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(259, 21);
             this.textBox1.TabIndex = 5;
+            this.textBox1.Text = "파일을 선택하세요";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 118);
+            this.textBox2.Location = new System.Drawing.Point(12, 120);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(74, 21);
             this.textBox2.TabIndex = 6;
@@ -139,7 +143,7 @@ namespace Satisfactory_map
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(92, 121);
+            this.label1.Location = new System.Drawing.Point(92, 123);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(17, 12);
             this.label1.TabIndex = 7;
@@ -148,18 +152,26 @@ namespace Satisfactory_map
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(12, 96);
+            this.checkBox1.Location = new System.Drawing.Point(12, 98);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(72, 16);
             this.checkBox1.TabIndex = 8;
             this.checkBox1.Text = "자동빽업";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(333, 66);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(10, 21);
+            this.textBox3.TabIndex = 9;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(355, 252);
+            this.ClientSize = new System.Drawing.Size(331, 180);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
@@ -184,12 +196,13 @@ namespace Satisfactory_map
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }
