@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO;
+using System.Security.Principal;
 
 namespace Satisfactory_map
 {
@@ -21,7 +22,14 @@ namespace Satisfactory_map
             
         }
 
-        
+
+        public bool IsRunningAsAdministrator()
+        {
+            WindowsIdentity windowsIdentity = WindowsIdentity.GetCurrent();
+            WindowsPrincipal windowsPrincipal = new WindowsPrincipal(windowsIdentity);
+            return windowsPrincipal.IsInRole(WindowsBuiltInRole.Administrator);
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             //세이프 파일 찾기
