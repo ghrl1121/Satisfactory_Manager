@@ -35,7 +35,7 @@ namespace Satisfactory_map
             //세이프 파일 찾기
             if (Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\..\\Local\\Factorygame\\Saved\\SaveGames\\"))
             {
-                System.Diagnostics.Process a = new System.Diagnostics.Process();
+                Process a = new Process();
                 a.StartInfo.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\..\\Local\\Factorygame\\Saved\\SaveGames\\";
                 a.Start();
             }

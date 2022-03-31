@@ -28,7 +28,9 @@ namespace Satisfactory_map
         private void button2_Click(object sender, EventArgs e)
         {
             //에픽게임즈
+            MessageBox.Show("에픽게임즈는 없어서...죄송합니다.\n\r 피드팩이 필요합니다!");
             Process.Start("com.epicgames.launcher://apps/CrabTest?action=launch&silent=true");
+            Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
