@@ -18,18 +18,8 @@ namespace Satisfactory_map
         public DirectoryInfo dirinfo;
         public Form1()
         {
-            InitializeComponent();
-            
+            InitializeComponent();   
         }
-
-
-        public bool IsRunningAsAdministrator()
-        {
-            WindowsIdentity windowsIdentity = WindowsIdentity.GetCurrent();
-            WindowsPrincipal windowsPrincipal = new WindowsPrincipal(windowsIdentity);
-            return windowsPrincipal.IsInRole(WindowsBuiltInRole.Administrator);
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             //세이프 파일 찾기
@@ -45,7 +35,6 @@ namespace Satisfactory_map
                 MessageBox.Show("세이브 파일이 없습니다. \n 실행후 \"새로만들기\" 를 한 후 저장 하여 주세요");
             }
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             //실행하기
@@ -53,7 +42,6 @@ namespace Satisfactory_map
             p.ShowDialog();
 
         }
-
         private void button4_Click(object sender, EventArgs e)
         {
             //멥 확인 하기
@@ -61,14 +49,12 @@ namespace Satisfactory_map
             Process.Start("https://satisfactory-calculator.com/ko/interactive-map");
             
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
             //빽업...(공부 필요)
             Form2 m = new Form2();
             m.Show();
         }
-
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             //코드보기
